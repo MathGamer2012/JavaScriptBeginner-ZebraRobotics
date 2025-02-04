@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html> 
+<head>
+</head>
+<body> 
+    <p> <b> <i> It is dark and rainy night. You are leading a group of 100 warrios to retrieve some treasure. 
+        The treasure is up in the mountains, deep in the caves. Holy spirits have guarded the treasure for years by moving it around 3 caves.
+        Fire-breathing dragons live in 2 of the caves while the 3rd has the treasure. 
+    </i></b> </p>
+<script>
+    var Yes = "Y"
+    while(Yes != "N")
+    {
+        var myCave = Math.floor(Math.random()*3) + 1;
+        var cave = prompt("Which cave do you choose? From 1-3")
+        if(cave ==  myCave)
+        {
+            alert("You have the treasure!")
+        }
+        else 
+        {
+            alert("Run away from the Dragon!")
+        }
+        var Yes = prompt("Want to play again? Y for Yes N for No")
+    }
+</script>
+</body>
+</html>

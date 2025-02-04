@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JS Beginner-Circles </title>
+	
+</head>
+<body>
+	<canvas id="canvas" width="1300" height="625">
+	<script>
+		function circle(cx, xpos,ypos,radius,colour){
+				cx.beginPath();
+				cx.arc(xpos,ypos,radius,Math.PI*2,false);
+				cx.closePath();
+				console.log(colour)
+				cx.fillStyle = colour;
+				cx.fill();	
+		}
+		for(i = 100; i > 0; i--) {
+		var canvas = document.getElementById("canvas");
+		var cx = canvas.getContext("2d");
+		var radius= Math.floor(Math.random()*75) + 50; //radius of circle
+		var xpos= Math.floor(Math.random()*1200);  //x - co-ordinate centre of the circle
+		var ypos= Math.floor(Math.random()*1200);  //y - co-ordinate centre of the circle
+		var colour = ["red", "blue", "yellow", "green", "purple"];
+		var colur = Math.floor(Math.random()*5);
+		console.log(colur);
+		circle(cx, xpos, ypos,radius,colour[colur])
+		}	    
+	</script>
+</body>
+</html>

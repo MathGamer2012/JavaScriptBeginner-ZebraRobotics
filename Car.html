@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+    var cupHolders = Math.floor(Math.random()*2);
+    var doors = Math.floor(Math.random()*5);
+    var heatedSeats = Math.floor(Math.random()*5);
+    console.log(doors);
+    console.log(heatedSeats);
+    if(cupHolders == 1)
+    {
+        cupHolders = 2;
+    }
+    else
+    {
+        cupHolders = 4;
+    }
+    console.log(cupHolders);
+    if((cupHolders == 2 || cupHolders == 4) && doors == 2 && heatedSeats == 2)
+                {
+                    alert("sutable car")
+                }
+                else 
+                {
+                    alert("not sutable car")
+                }
+</script>
+</body>
+</html>

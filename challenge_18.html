@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> JS Beginner-Rectangles </title>
+	 
+</head>
+<body>
+    
+    <button onclick="randomize()">Randomize</button>
+	<canvas  id="canvas" width="800" height="800">
+
+    <script>
+        function randomize(){
+
+            var number = Math.floor(Math.random()*2);
+            console.log(number);
+            if(number == 1)
+            {
+                cx.fillStyle = "green";
+            }
+            else
+            {
+                cx.fillStyle = "red";
+
+            }
+            xpos = xpos + 20;
+            ypos = ypos + 20;
+
+            cx.fillRect(xpos,ypos,rwidth,rheight);
+        } 
+		var canvas = document.getElementById("canvas");
+		var cx = canvas.getContext("2d");
+		var rwidth= 200; //rectangle width
+		var rheight= 400; // rectangle height
+		var xpos=0; //x-coordinate 
+		var ypos=0; //y-coordinate
+        cx.fillRect(xpos,ypos,rwidth,rheight);
+    </script>
+</body>
+</html>

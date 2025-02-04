@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> JS Beginner-Rectangles </title>
+	
+</head>
+<body>
+	<canvas  id="canvas" width="400" height="400">
+	
+	<script>
+		var canvas = document.getElementById("canvas");
+		var cx = canvas.getContext("2d");
+		var rwidth=20; //rectangle width
+		var rheight=40; // rectangle height
+		var xpos=0; //x-coordinate 
+		var ypos=0; //y-coordinate
+		var awards = prompt ("Have You won an award enter Y for yes and N for No");
+		var score = prompt ("what is your score from 1% to 100%"); 
+		
+
+		if(awards == "Y" && score >= 80)
+		{	
+			cx.fillStyle = "green";
+		}
+		else
+		{
+			cx.fillStyle = "red";
+
+		}
+					
+		cx.fillRect(xpos,ypos,rwidth,rheight);
+		
+	</script>
+</body>
+</html>
